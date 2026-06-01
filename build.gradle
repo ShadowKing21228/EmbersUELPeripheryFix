@@ -54,6 +54,7 @@ configurations {
     compileOnly.extendsFrom(modCompileOnly)
     modRuntimeOnly
     runtimeOnly.extendsFrom(modRuntimeOnly)
+    implementation.extendsFrom shadow
 }
 
 String remapTaskName = propertyBool('enable_shadow') ? "remapShadowJar" : "remapJar"
@@ -113,6 +114,9 @@ dependencies {
         testImplementation 'org.junit.jupiter:junit-jupiter:6.0.3'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     }
+
+    annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.2")
+    shadow "com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.2"
 }
 
 apply from: 'gradle/scripts/dependencies.gradle'
@@ -218,6 +222,8 @@ jar {
 shadowJar {
     configurations = [project.configurations.shadow]
     archiveClassifier = "shadow"
+    relocate("com.bawnorton.mixinsquared", "com.shadowking21.peripheryfix.mixinsquared")
+    mergeServiceFiles()
 }
 
 

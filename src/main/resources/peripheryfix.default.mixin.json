@@ -1,11 +1,9 @@
 {
   "required": true,
-  "package": "com.example.modid.mixin",
+  "package": "com.shadowking21.peripheryfix.mixin",
   "compatibilityLevel": "JAVA_8",
   "target": "@env(DEFAULT)",
-  "client": [
-    "MinecraftMixin"
-  ],
+  "client": [],
   "mixins": [],
   "server": [],
   "setSourceFile": true,
