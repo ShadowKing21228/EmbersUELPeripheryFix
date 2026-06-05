@@ -1,12 +1,12 @@
 [{
-	"modid": "{{ mod_id }}",
-	"name": "{{ mod_name }}",
-	"version": "{{ mod_version }}",
+	"modid": "peripheryfix",
+	"name": "Periphery",
+	"version": "1.0.1",
 	"mcversion": "1.12.2",
-	"description": "{{ mod_description }}",
-	"authorList": ["{{ mod_authors }}"],
-	"credits": "{{ mod_credits }}",
-	"url": "{{ mod_url }}",
+	"description": "Mod designed to resolve a crash issue between Thaumic Periphery and Embers UEL on server versions.",
+	"authorList": ["ShadowKing21"],
+	"credits": "ShadowKing21",
+	"url": "https://www.curseforge.com/minecraft/mc-mods/thaumic-periphery-fix",
 	"updateJSON": "{{ mod_update_json }}",
 	"logoFile": "{{ mod_logo_path }}"
 }]

@@ -1,6 +1,7 @@
 {
   "required": true,
   "package": "com.shadowking21.peripheryfix.mixin",
+  "plugin": "com.shadowking21.peripheryfix.PeripheryFixMixinConfigPlugin",
   "compatibilityLevel": "JAVA_8",
   "target": "@env(DEFAULT)",
   "client": [],

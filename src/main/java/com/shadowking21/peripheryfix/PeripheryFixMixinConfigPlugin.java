@@ -7,6 +7,7 @@ import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -32,10 +33,7 @@ public class PeripheryFixMixinConfigPlugin implements IMixinConfigPlugin {
      */
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        return switch (mixinClassName.split("\\.")[5]) {
-            case "hei" -> Loader.isModLoaded("jei");
-            default -> true;
-        };
+        return true;
     }
 
     @Override
@@ -46,7 +44,7 @@ public class PeripheryFixMixinConfigPlugin implements IMixinConfigPlugin {
     @Override
     public List<String> getMixins() {
         MixinSquaredBootstrap.reOrderExtensions();
-        return null;
+        return Collections.emptyList();
     }
 
     @Override
