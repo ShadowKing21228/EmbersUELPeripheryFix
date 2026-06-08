@@ -1,7 +1,7 @@
 [{
 	"modid": "peripheryfix",
 	"name": "Periphery",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"mcversion": "1.12.2",
 	"description": "Mod designed to resolve a crash issue between Thaumic Periphery and Embers UEL on server versions.",
 	"authorList": ["ShadowKing21"],
